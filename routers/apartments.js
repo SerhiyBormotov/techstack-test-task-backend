@@ -4,7 +4,6 @@ import Apartment from '../models/apartment.js'
 const apartmentsRouter = express.Router();
 
 const getApartment = async (req, res, next) => {
-    console.log(req.params);
     let apartment;
     try {
          apartment = await Apartment.findById(req.params.id);
